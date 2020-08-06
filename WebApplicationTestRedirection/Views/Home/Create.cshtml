@@ -1,0 +1,28 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/css/UpdatePageStyle.css" />
+    <title>Create</title>
+</head>
+<body>
+    <div>
+        <b>Address</b>
+        <form method="post" action="">
+            <span>LongUrl</span><br />
+            <input value="@ViewBag.LongUrl" name="LongUrl" /><br />
+            <input style="margin-top:3px;" type="submit" value="Создать" />
+            <input hidden value="@ViewBag.Id" name="Id" /><br />
+            <input hidden value="@ViewBag.ShortUrl" name="ShortUrl" /><br />
+            <input hidden value="@ViewBag.CreationData" name="CreationData" /><br />
+            <input hidden value="@ViewBag.Transitions" name="Transitions" /><br />
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+﻿
+@{
+    Layout = null;
+}
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <link href="~/css/UpdatePageStyle.css" rel="stylesheet" type="text/css" />
+        <title>Обновить</title>
+    </head>
+    <body>
+        <div>
+            <h3>Address</h3>
+            <form method="post" action="">
+                <span>Id</span><br />
+                <input disabled value="@ViewBag.Id" name="Id" /><br />
+                <span>LongUrl</span><br />
+                <input value="@ViewBag.LongUrl" name="LongUrl" /><br />
+                <span>ShortUrl</span><br />
+                <input value="@ViewBag.ShortUrl" name="ShortUrl" /><br />
+                <span>CreationData</span><br />
+                <input value="@ViewBag.CreationData" name="CreationData" /><br />
+                <span>Transitions</span><br />
+                <input value="@ViewBag.Transitions" name="Transitions" /><br />
+                <input type="submit" value="Сохранить" />
+            </form>
+        </div>
+    </body>
+    </html>
+

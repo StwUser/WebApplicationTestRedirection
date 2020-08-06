@@ -1,0 +1,42 @@
+﻿@{
+    Layout = null;
+}
+
+    <!DOCTYPE html>
+
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <link href="~/css/Style.css" rel="stylesheet" type="text/css" />
+        <title>Addresses</title>
+    </head>
+    <body>
+        <div>
+            <p style="margin-bottom:5px;"> 
+                <span><b>Urls:</b></span>
+                <a style="margin-left:450px;" href="/Home/Create">Добавить url</a>
+            </p>
+            <table>
+                <tr>
+                    <td><p>Длинный Url</p></td>
+                    <td><p>Сокращенный Url</p></td>
+                    <td><p>Дата создания</p></td>
+                    <td><p>Переходов</p></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                @foreach (var b in ViewBag.Addresses)
+                {
+            <tr>
+                <td><p>@b.LongUrl</p></td>
+                <td><p>@b.ShortUrl</p></td>
+                <td><p>@b.CreationData</p></td>
+                <td><p>@b.Transitions</p></td>
+                <td><p><a href="/Home/Delete/@b.Id">Удалить</a></p></td>
+                <td><p><a href="/Home/Update/@b.Id">Обновить</a></p></td>
+</tr>
+                }
+            </table>
+        </div>
+    </body>
+    </html>
