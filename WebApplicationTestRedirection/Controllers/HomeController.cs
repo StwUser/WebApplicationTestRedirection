@@ -25,7 +25,6 @@ namespace WebApplicationTestRedirection.Controllers
 
         public IActionResult Index()
         {
-            //_repository.AddAddress(new Address() { LongUrl = "long2", ShortUrl = "short2", CreationData = "data2", Transitions = 0 });
 
             var addresses = _repository.GetAddresses();
 
